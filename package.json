@@ -1,0 +1,22 @@
+{
+  "name": "nft-stats",
+  "version": "1.0.0",
+  "description": "Utils to query NFT stats",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "iota-link-stats": "node iotaLinkStats.js",
+    "calc-points": "node calcPoints.js",
+    "L1-address": "node getL1FromL2Address.js"
+  },
+  "dependencies": {
+    "@iota/iota-sdk": "^0.6.0",
+    "csv": "^6.3.11",
+    "dotenv": "^16.5.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "readline": "^1.3.0"
+  }
+}
