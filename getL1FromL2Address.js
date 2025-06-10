@@ -30,6 +30,10 @@ async function extractDataFromCSV(filePath, delimiter, from_line, column) {
     }
 }
 
+function caseInsensitiveIncludes(arr, searchStr) {
+    return arr.some(item => item.toLowerCase().includes(searchStr.toLowerCase()));
+}
+
 async function main() {
     // Read the file "iota-link.csv" line by line.
     // For each line, split based on the format `L1Address,L2Address,Digest` to extract L1Address and L2Address
@@ -66,7 +70,7 @@ async function main() {
             // Format of the file "iota-link.csv" is: L1Address,L2Address,Digest
             const [L1Address, L2Address, digest] = line.split(',');
 
-            if (L2AddressListFromInputFile.includes(L2Address)) {
+            if (caseInsensitiveIncludes(L2AddressListFromInputFile, L2Address)) {
                 csvData.push([L2Address, L1Address, digest]);
             }
         }
