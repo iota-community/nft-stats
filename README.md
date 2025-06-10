@@ -87,4 +87,4 @@ Ensure to run the step `npm run iota-link-stats` for generating the CSV file `io
 
 Run this cmd `npm run L1-address`.
 
-The result will be stored in the CSV file `L2-L1-address.csv` in folder `data-L2-L1-address`
+The result will be stored in the CSV file `L2-L1-Address.csv` in folder `data-L2-L1-address`
